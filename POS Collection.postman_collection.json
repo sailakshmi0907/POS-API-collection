@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "8491ab20-af2b-45f7-b46c-8cc51139bcc0",
+		"name": "POS Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37633165"
+	},
+	"item": [
+		{
+			"name": "Countries APi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/countries",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "from API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postCode\": \"35600\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"getStateByPostcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postCode\": \"84000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/getStateByPostcode",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"getStateByPostcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Price API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Malaysia\",\r\n    \"weight\": 1.8,\r\n    \"postcodeFrom\": 35600,\r\n    \"postcodeTo\": 2600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www-api.pos.com.my/api/price",
+					"protocol": "https",
+					"host": [
+						"www-api",
+						"pos",
+						"com",
+						"my"
+					],
+					"path": [
+						"api",
+						"price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
